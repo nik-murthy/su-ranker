@@ -1,60 +1,167 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
-
-    <v-content>
-      <HelloWorld/>
-    </v-content>
+    <div id="app">
+      <Suburbs v-bind:suburbs="suburbs" />
+      <!-- <suburbV2 /> -->
+    </div>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
-
+import Suburbs from "./components/Suburbs";
+//import SuburbV2 from "./components/SuburbV2";
 export default {
-  name: 'App',
+  name: "app",
 
   components: {
-    HelloWorld,
+    Suburbs
+    //SuburbV2
   },
 
   data: () => ({
-    //
+    suburbs: [
+        {
+          suburbId: 1426,
+          name: "Melbourne",
+          postcode: 3000,
+          state: "VIC",
+          sa2region: 206041122,
+          lga_id: 367,
+          d_score: 23,
+          h_score: 10,
+          u_score: 10,
+          skew: 2,
+          total: 43,
+          medianHousePrice: 533000
+        },
+        {
+          suburbId: 1502,
+          name: "Fitzroy",
+          postcode: 3065,
+          state: "VIC",
+          sa2region: 206071142,
+          lga_id: 367,
+          d_score: 23,
+          h_score: 10,
+          u_score: 10,
+          skew: 2,
+          total: 43,
+          medianHousePrice: 1365000
+        },
+        {
+          suburbId: 6212,
+          name: "Kew",
+          postcode: 3101,
+          state: "VIC",
+          sa2region: 506021122,
+          lga_id: 334,
+          d_score: 23,
+          h_score: 10,
+          u_score: 10,
+          skew: 2,
+          total: 43,
+          medianHousePrice: 1970000
+        },
+        {
+          suburbId: 6410,
+          name: "Berwick",
+          postcode: 3806,
+          state: "VIC",
+          sa2region: 212021294,
+          lga_id: 338,
+          d_score: 18,
+          h_score: 10,
+          u_score: 10,
+          skew: 2,
+          total: 38,
+          medianHousePrice: 675000
+        },
+        {
+          suburbId: 1067,
+          name: "Camden",
+          postcode: 2570,
+          state: "NSW",
+          sa2region: 123011433,
+          lga_id: 22,
+          d_score: 30,
+          h_score: 3,
+          u_score: 5,
+          skew: 10,
+          total: 38,
+          medianHousePrice: 665000
+        },
+        {
+          suburbId: 7630,
+          name: "Werribee",
+          postcode: 3030,
+          state: "VIC",
+          sa2region: 213051467,
+          lga_id: 335,
+          d_score: 26,
+          h_score: 6,
+          u_score: 5,
+          skew: 5,
+          total: 37,
+          medianHousePrice: 500000
+        },
+        {
+          suburbId: 5838,
+          name: "Hawthorn",
+          postcode: 3122,
+          state: "VIC",
+          sa2region: 207011151,
+          lga_id: 334,
+          d_score: 23,
+          h_score: 4,
+          u_score: 10,
+          skew: 6,
+          total: 37,
+          medianHousePrice: 1756000
+        },
+        {
+          suburbId: 1689,
+          name: "East Melbourne",
+          postcode: 3002,
+          state: "VIC",
+          sa2region: 206041119,
+          lga_id: 367,
+          d_score: 23,
+          h_score: 10,
+          u_score: 1,
+          skew: 23,
+          total: 34,
+          medianHousePrice: 2990000
+        },
+        {
+          suburbId: 6989,
+          name: "Mildura",
+          postcode: 3500,
+          state: "VIC",
+          sa2region: 215021469,
+          lga_id: 125,
+          d_score: 21,
+          h_score: 7,
+          u_score: 5,
+          skew: 4,
+          total: 33,
+          medianHousePrice: 312000
+        },
+        {
+          suburbId: 987,
+          name: "Cobbitty",
+          postcode: 2570,
+          state: "NSW",
+          sa2region: 127011506,
+          lga_id: 22,
+          d_score: 30,
+          h_score: 1,
+          u_score: 1,
+          skew: 30,
+          total: 32,
+          medianHousePrice: 720000
+        }
+      ]
   }),
+  methods: {}
 };
 </script>
