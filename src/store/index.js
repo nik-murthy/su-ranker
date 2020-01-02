@@ -14,17 +14,26 @@ export default new Vuex.Store({
     }
   },
   mutations: {
-    setSuburbs (state, suburbs) {
+    setSuburbs(state, suburbs) {
       state.suburbs = suburbs;
+    },
+    setNumPages(state, numPages) {
+      state.numPages = numPages;
+    },
+    setNumResults(state, numResults) {
+      state.numResults = numResults;
     }
   },
   actions: {
     async fetchSuburbs(context) {
       const suburbs = await client.fetchSuburbs();
-      context.commit('setSuburbs', suburbs);
-    
+      console.log(suburbs);
+      context.commit('setSuburbs', suburbs.data.suburbs);
+      context.commit('setNumPages', suburbs.data.numPages);
+      context.commit('setNumResults', suburbs.data.numResults);
     }
   },
   modules: {
+
   }
-})
+});

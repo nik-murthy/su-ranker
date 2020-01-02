@@ -5,8 +5,8 @@
       <v-row>
         <v-col cols="12">
           <v-row align="stretch">
-            <v-icon v-show="suburb.h_score>1"  small color="white" right>mdi-school</v-icon>
-            <v-icon v-show="suburb.u_score>1" small color="white" right>mdi-hospital</v-icon>
+            <v-icon v-show="suburb.hScore>1"  small color="white" right>mdi-school</v-icon>
+            <v-icon v-show="suburb.uScore>1" small color="white" right>mdi-hospital</v-icon>
           </v-row>
         </v-col>
         <v-col cols="12">

@@ -1,8 +1,8 @@
-import suburbs from "./data/suburbs.json";
+import suburbs from "./data/suburbsResponse.json";
 
 const fetch = (mockData, time) => new Promise(
     resolve => setTimeout(() => {
-        resolve(mockData);
+        resolve(mockData.data);
     }, time),
   );
 

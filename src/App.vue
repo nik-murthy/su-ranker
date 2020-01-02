@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <div id="app">
-      <Suburbs v-bind:suburbs="suburbs" />
+      <Suburbs />
     </div>
   </v-app>
 </template>
@@ -14,18 +14,7 @@ export default {
   components: {
     Suburbs
   },
-
-  data: () => ({
-  }),
-  methods: {},
-  computed: {
-    suburbs() {
-      return this.$store.state.suburbs;
-    }
-  },
-  async mounted() {
-    this.$store.dispatch('fetchSuburbs');
-  }
-  
+  data: () => ({}),
+  methods: {}
 };
 </script>
