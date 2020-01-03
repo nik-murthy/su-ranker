@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <div id="app">
-      <Suburbs />
+      <suburbs />
     </div>
   </v-app>
 </template>
@@ -15,6 +15,9 @@ export default {
     Suburbs
   },
   data: () => ({}),
-  methods: {}
+  methods: {},
+  async mounted() {
+    this.$store.dispatch("fetchSuburbs", {});
+  }
 };
 </script>

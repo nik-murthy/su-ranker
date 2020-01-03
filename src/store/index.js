@@ -6,11 +6,19 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    suburbs: []
+    suburbs: [],
+    numPages: 0,
+    numResults: 0
   },
   getters: {
-    getSuburbs(state) {
+    suburbs: state => {
       return state.suburbs;
+    },
+    numPages: state => {
+      return state.numPages;
+    },
+    numResults: state => {
+      return state.numResults;
     }
   },
   mutations: {
@@ -25,15 +33,12 @@ export default new Vuex.Store({
     }
   },
   actions: {
-    async fetchSuburbs(context) {
-      const suburbs = await client.fetchSuburbs();
-      console.log(suburbs);
+    async fetchSuburbs(context, searchCriteria) {
+
+      const suburbs = await client.fetchSuburbs(searchCriteria);      
       context.commit('setSuburbs', suburbs.data.suburbs);
       context.commit('setNumPages', suburbs.data.numPages);
       context.commit('setNumResults', suburbs.data.numResults);
     }
-  },
-  modules: {
-
   }
 });
