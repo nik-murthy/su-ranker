@@ -5,7 +5,7 @@ module.exports = {
     "vuetify"
   ],
   publicPath: process.env.NODE_ENV === 'production'
-    ? '/su-ranker/'
+    ? '/su-ranker-web/'
     : '/',
    chainWebpack: config => {
       const apiClient = process.env.VUE_APP_API_CLIENT; // mock or server
