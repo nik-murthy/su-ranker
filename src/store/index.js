@@ -28,9 +28,9 @@ export default new Vuex.Store({
     async fetchSuburbs(context) {
       const suburbs = await client.fetchSuburbs();
       console.log(suburbs);
-      context.commit('setSuburbs', suburbs.suburbs);
-      context.commit('setNumPages', suburbs.numPages);
-      context.commit('setNumResults', suburbs.numResults);
+      context.commit('setSuburbs', suburbs.data.suburbs);
+      context.commit('setNumPages', suburbs.data.numPages);
+      context.commit('setNumResults', suburbs.data.numResults);
     }
   },
   modules: {
