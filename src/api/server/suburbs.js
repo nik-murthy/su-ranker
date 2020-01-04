@@ -29,6 +29,12 @@ export default {
       return axios
         .get(`${process.env.VUE_APP_SU_API_BASE_URL}/suburbs?${queryString}`)
         .then(response => response.data);
-    }
+    }    
+  },
+  fetchSuburb(suburbId) {
+    return axios
+      .get(`${process.env.VUE_APP_SU_API_BASE_URL}/suburb?suburbId=${suburbId}`)
+      .then(response => response.data);
+
   }
-}
+};

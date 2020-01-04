@@ -1,0 +1,75 @@
+{
+    "data": {
+        "suburb": {
+            "suburbInfo": {
+                "suburbId": 6212,
+                "name": "Kew",
+                "postcode": 3101,
+                "state": "VIC",
+                "sa2region": 506021122,
+                "lgaId": 334,
+                "dScore": 23,
+                "hScore": 10,
+                "uScore": 10,
+                "skew": 2,
+                "total": 43,
+                "medianHousePrice": 1970000,
+                "medianUnitPrice": 709000
+            },
+            "lga": {
+                "lgaId": 334,
+                "lgaName": "Boroondara",
+                "type": "Urban Development Very Large",
+                "populationGrowth": "0.90%",
+                "score": 4
+            },
+            "hospitals": [{
+                "hospitalId": 157,
+                "hospitalName": "Caritas Christi Hospice [Kew]",
+                "suburbId": 6212,
+                "beds": "<50",
+                "teaching_hospital": "N",
+                "score": 2
+            }, {
+                "hospitalId": 739,
+                "hospitalName": "Royal Talbot Rehabilitation Centre [Kew]",
+                "suburbId": 6212,
+                "beds": "50-99",
+                "teaching_hospital": "N",
+                "score": 3
+            }, {
+                "hospitalId": 785,
+                "hospitalName": "St George's Health Service- Aged Care",
+                "suburbId": 6212,
+                "beds": "100-199",
+                "teaching_hospital": "N",
+                "score": 4
+            }, {
+                "hospitalId": 815,
+                "hospitalName": "St Vincent's Private Hospital Kew",
+                "suburbId": 6212,
+                "beds": "<50",
+                "teaching_hospital": "N",
+                "score": 2
+            }],
+            "universities": [{
+                "universityId": 115,
+                "name": "University of Divinity",
+                "campus_type": "Main",
+                "suburbId": 6212,
+                "score": 10
+            }, {
+                "universityId": 218,
+                "name": "University of Divinity",
+                "campus_type": "Main",
+                "suburbId": 6212,
+                "score": 10
+            }],
+            "wikiSummary": {
+                "suburbId": 6212,
+                "wikipedia_summary": "Kew is an inner suburb of Melbourne, Australia, 5 km east from Melbourne's Central Business District. Its local government area is the City of Boroondara. At the 2016 Census, Kew had a population of 24,605.Kew used to be a city in its own right. But in 1994 the cities of Kew, Hawthorn and Camberwell were amalgamated to form the City of Boroondara. The suburb borders the Yarra River to the west and north, with Hawthorn to its south and Balwyn to its east."
+            }
+        }
+    },
+    "message": "Success"
+}

@@ -7,6 +7,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     suburbs: [],
+    suburb: {},
     numPages: 0,
     numResults: 0
   },
@@ -19,6 +20,9 @@ export default new Vuex.Store({
     },
     numResults: state => {
       return state.numResults;
+    },
+    suburb: state => {
+      return state.suburb;
     }
   },
   mutations: {
@@ -30,6 +34,9 @@ export default new Vuex.Store({
     },
     setNumResults(state, numResults) {
       state.numResults = numResults;
+    },
+    setSuburb(state, suburb) {
+      state.suburb = suburb;
     }
   },
   actions: {
@@ -39,6 +46,11 @@ export default new Vuex.Store({
       context.commit('setSuburbs', suburbs.data.suburbs);
       context.commit('setNumPages', suburbs.data.numPages);
       context.commit('setNumResults', suburbs.data.numResults);
+    },
+    async fetchSuburb(context, suburbId) {
+      const suburb = await client.fetchSuburb(suburbId);
+      context.commit('setSuburb', suburb.data);
+
     }
   }
 });

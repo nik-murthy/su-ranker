@@ -1,5 +1,5 @@
 <template>
-<v-card class="mx-auto" min-width="50" max-width="400">
+<v-card class="mx-auto" min-width="50" max-width="400" @click="getDetails(suburb.suburbId)">
   <v-img src="https://cdn.vuetifyjs.com/images/cards/road.jpg" :aspect-ratio="16/9" min-width="100" max-width="400">
     <v-container>
       <v-row>
@@ -26,6 +26,16 @@
 export default {
   name: "SuburbV2",
   props: ["suburb"],
-  components: {}
+  components: {},
+  methods: {
+    getDetails(suburbId) {
+      this.$router.push({
+        name: 'suburb',
+        params: {
+          suburbId
+        }
+      })
+    }
+  }
 };
 </script>

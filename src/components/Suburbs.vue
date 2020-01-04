@@ -1,7 +1,6 @@
 <template>
   <v-container fluid>
     <v-row dense>
-      <v-divider></v-divider>
     </v-row>
     <v-row align="center">
       <v-col lg="4" sm="12">
@@ -16,7 +15,7 @@
       </v-col>
       <v-col lg="4" sm="12">
         <v-row align="stretch" justify="center" dense>
-          <v-btn justify="center" @click="updateSuburbs('search')">Search</v-btn>
+          <v-btn @click="updateSuburbs('search')">Search</v-btn>
         </v-row>
       </v-col>
     </v-row>
@@ -44,8 +43,8 @@
       <v-col lg="4" sm="6" v-for="suburb in suburbs" :key="suburb.suburbId">
         <SuburbV2 :suburb="suburb" />
       </v-col>
-    </v-row>
-    <v-row>
+    </v-row>    
+    <v-row class="mt-5">       
       <v-pagination v-model="page" :length="numPages" @input="updateSuburbs('pagination')"></v-pagination>
     </v-row>
   </v-container>
@@ -96,6 +95,9 @@ export default {
         })
         .catch(error => console.log(error));
     }
+  },
+   async mounted() {
+    this.$store.dispatch("fetchSuburbs", {});
   }
 };
 </script>
