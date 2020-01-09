@@ -40,7 +40,7 @@
       </v-col>
     </v-row>
     <v-row dense>
-      <v-col lg="4" xs="4" v-for="suburb in suburbs" :key="suburb.suburbId">
+      <v-col cols="4" lg="4" sm="12" v-for="suburb in suburbs" :key="suburb.suburbId">
         <Suburb :suburb="suburb" />
       </v-col>
     </v-row>    
