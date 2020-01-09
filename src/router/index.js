@@ -7,6 +7,7 @@ import SuburbDetail from '../components/SuburbDetail';
 Vue.use(Router);
 
 export default new Router({
+    base: '/su-ranker-web',
     mode: 'history',
     routes: [{
             path: '/',
