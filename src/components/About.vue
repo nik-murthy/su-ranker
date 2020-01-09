@@ -1,17 +1,11 @@
 <template>
     <v-container>
         
-        <p class="text-center font-weight-bold headline">Welcome to Aussie Suburb Ranker!</p>
-            
+        <p class="text-center font-weight-bold display-1">Welcome to Aussie Suburb Ranker!</p>          
         
-
-            <p>
-            Aussie Suburb Ranker rates suburbs across Australia on their potential for investment properties.
-            Here is how the site works.
-            </p>
-        
-        
-            <p>Three factors are considered for ranking - </p>            
+          <blockquote class="blue-grey darken-1 white--text font-italic blockquote text-center">"Given a budget, what are the best 
+              suburbs to purchase an investment property in Australia?"</blockquote><br/>
+            <p>Aussie Suburb Ranker tries to answer this question by ranking suburbs based on three factors - </p>            
             <p><ul>
                 <li>Population growth</li>
                 <li>Hospitals</li>
@@ -19,19 +13,19 @@
             </ul>
             </p>            
             <p>
-                Click on the "SUBURBS" link at the top right corner of this page to view all suburbs across Australia
-                and to access the search and sort features.
+                Using this website, you can search for a suburb that fits your budget! Click on <var>"SUBURBS"</var> on the top right
+                to view all suburbs.
             </p>
             <p class="title">Search and Sort</p>
         
             <p>
-                You can perform search for suburbs by price for house or unit. If you enter 400,000 and hit search,
-                you will be shown all the suburbs where the median property price is within that price. 
+                On the <var>"SUBURBS"</var> page, if you enter 400,000 and hit search, you will be shown all the suburbs where 
+                the median property price is within 400,000. 
             </p>
             <p>
                 There is a switch on the left of the budget/price field. If the switch is to the left, search is 
-                performed on median house price within the number entered. If the switch is to the right, then search
-                is performed by median unit price.
+                performed on median house price. If the switch is to the right, then search
+                is performed by median unit price. (Data sourced from Domain.com.au)
             </p>
             <p>
                 You can filter your results based on the state of your interest. You can also sort the suburbs based

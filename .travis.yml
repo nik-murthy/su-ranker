@@ -4,7 +4,7 @@ node_js:
 
 cache: npm
 
-script: npm run build
+script: VUE_APP_API_CLIENT=$VUE_APP_API_CLIENT VUE_APP_SU_API_BASE_URL=$VUE_APP_SU_API_BASE_URL npm run build
 
 deploy:
  provider: pages
