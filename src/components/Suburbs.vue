@@ -41,7 +41,7 @@
     </v-row>
     <v-row dense>
       <v-col lg="4" sm="6" v-for="suburb in suburbs" :key="suburb.suburbId">
-        <SuburbV2 :suburb="suburb" />
+        <Suburb :suburb="suburb" />
       </v-col>
     </v-row>    
     <v-row class="mt-5">       
@@ -51,12 +51,12 @@
 </template>
 
 <script>
-import SuburbV2 from "./SuburbV2";
+import Suburb from "./Suburb";
 
 export default {
   name: "Suburbs",
   components: {
-    SuburbV2
+    Suburb
   },
   computed: {
     suburbs() {
