@@ -14,7 +14,7 @@ export default {
     if (searchCriteria.mmp != undefined & searchCriteria.mmp != '') {
       queryString += "&mmp=" + searchCriteria.mmp;
     }
-    if (searchCriteria.type != undefined) {
+    if (searchCriteria.type != undefined & searchCriteria.type === "Unit") {
       if (!searchCriteria.type)
         queryString += "&type=unit";
     }
